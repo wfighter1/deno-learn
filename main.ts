@@ -16,7 +16,7 @@ class TCPServer {
   }
 
   async start() {
-    const listener = Deno.listen({ port: 8080 });
+    const listener = Deno.listen({ port: 80 });
 
     console.log(`Server is listening on ${this.addr}`);
 
@@ -73,5 +73,5 @@ class TCPServer {
   }
 }
 
-const server = new TCPServer("0.0.0.0:8080");
+const server = new TCPServer("0.0.0.0:80");
 server.start();
